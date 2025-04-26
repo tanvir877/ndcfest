@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberLink - Neural Interface Technology</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/canvas.js"></script>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  
+  <header class="header">
+    <div class="container">
+        <a href="#" class="logo">
+            <div class="logo-symbol">
+                <div class="logo-circuit"></div>
+                <div class="logo-paths">
+                    <div class="logo-path"></div>
+                    <div class="logo-path"></div>
+                </div>
+            </div>
+            <span class="logo-text">CyberLink</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#science">Science</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-text">CYBERLINK</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="video-background">
+        <video autoplay muted loop playsinline id="heroVideo">
+          <source src="assets/videos/neural-network.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="container">
+        <h1 class="reveal-text">Building a bridge between biology and technology</h1>
+        <div class="hero-text">
+            We're developing high-bandwidth brain-computer interfaces
+            to restore and augment human capabilities.
+            
+        </div>
+        <div class="hero-cta">
+            <a href="#approach" class="btn btn-primary">Learn More</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Our Approach</h2>
+          <p>We're developing high-bandwidth brain-computer interfaces to restore and augment human capabilities. Our technology seamlessly integrates with neural networks, enabling unprecedented levels of communication between the human brain and external devices.</p>
+          <div class="feature-grid">
+            <div class="feature">
+              <h3>Neural Processing</h3>
+              <p>Advanced algorithms process neural signals in real-time, enabling natural and intuitive control.</p>
+            </div>
+            <div class="feature">
+              <h3>Precision Engineering</h3>
+              <p>Microscale technology designed for optimal integration with biological systems.</p>
+            </div>
+            <div class="feature">
+              <h3>Adaptive Learning</h3>
+              <p>AI-powered systems that learn and adapt to individual neural patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="section tech-section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Advanced Technology</h2>
+          <p>Experience the next generation of neural interface technology</p>
+          
+          <div class="tech-grid">
+            <div class="tech-card" data-tech="brain">
+              <div class="hologram">
+                <div class="brain-model"></div>
+                <div class="data-points"></div>
+              </div>
+              <div class="tech-info">
+                <div class="tech-header">
+                  <span class="tech-icon">🧠</span>
+                  <h3>Neural Mapping</h3>
+                </div>
+                <div class="tech-stats">
+                  <div class="stat-bar">
+                    <div class="stat-label">Processing Power</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="85"></div>
+                    </div>
+                  </div>
+                  <div class="stat-bar">
+                    <div class="stat-label">Accuracy</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="95"></div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="tech-features">
+                  <li>Real-time neural activity mapping</li>
+                  <li>Advanced signal processing</li>
+                  <li>Adaptive learning algorithms</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-card" data-tech="chip">
+              <div class="hologram">
+                <div class="chip-model"></div>
+                <div class="circuit-paths"></div>
+              </div>
+              <div class="tech-info">
+                <div class="tech-header">
+                  <span class="tech-icon">💡</span>
+                  <h3>Quantum Processing</h3>
+                </div>
+                <div class="tech-stats">
+                  <div class="stat-bar">
+                    <div class="stat-label">Computing Speed</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="90"></div>
+                    </div>
+                  </div>
+                  <div class="stat-bar">
+                    <div class="stat-label">Efficiency</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="88"></div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="tech-features">
+                  <li>Quantum-enhanced processing</li>
+                  <li>Ultra-low latency</li>
+                  <li>Advanced error correction</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-card" data-tech="network">
+              <div class="hologram">
+                <div class="network-model"></div>
+                <div class="data-streams"></div>
+              </div>
+              <div class="tech-info">
+                <div class="tech-header">
+                  <span class="tech-icon">🌐</span>
+                  <h3>Neural Network</h3>
+                </div>
+                <div class="tech-stats">
+                  <div class="stat-bar">
+                    <div class="stat-label">Learning Rate</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="92"></div>
+                    </div>
+                  </div>
+                  <div class="stat-bar">
+                    <div class="stat-label">Adaptability</div>
+                    <div class="stat-track">
+                      <div class="stat-fill" data-percentage="94"></div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="tech-features">
+                  <li>Self-optimizing networks</li>
+                  <li>Pattern recognition</li>
+                  <li>Predictive analysis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-overview">
+            <div class="overview-visual">
+              <div class="data-visualization">
+                <canvas id="techCanvas"></canvas>
+              </div>
+            </div>
+            <div class="overview-content">
+              <h3>System Overview</h3>
+              <div class="metrics-grid">
+                <div class="metric">
+                  <div class="metric-value" data-count="1000">0</div>
+                  <div class="metric-label">OPERATIONS/SEC</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value" data-count="0.001">0</div>
+                  <div class="metric-label">LATENCY (MS)</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value" data-count="99.99">0</div>
+                  <div class="metric-label">RELIABILITY (%)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Project Showcase</h2>
+          <p>Explore our groundbreaking projects that are pushing the boundaries of neural interface technology.</p>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="https://www.healthcare-outlook.com/media/FOB1-Neuralink-1536px-jpg.webp">
+              <div class="project-overlay">
+                <h3 class="project-title">Neural Interface Platform</h3>
+                <p class="project-description">A next-generation brain-computer interface that enables direct neural communication.</p>
+                <div class="project-links">
+                  <a href="#" class="project-link">View Details →</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="https://cdn.bcm.edu/sites/default/files/styles/two_thirds_width_component_image/public/media/images/brain-lights.png?h=7c71ab5e&itok=Q8HhfZH1">
+              <div class="project-overlay">
+                <h3 class="project-title">Neural Signal Processing</h3>
+                <p class="project-description">Advanced algorithms for real-time neural signal processing and interpretation.</p>
+                <div class="project-links">
+                  <a href="#" class="project-link">View Details →</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="https://softengi.com/wp-content/uploads/2021/07/15-most-common-deep-learning-use-cases-across-industries.jpg" alt="AI Integration Project" class="project-image">
+              <div class="project-overlay">
+                <h3 class="project-title">AI Integration System</h3>
+                <p class="project-description">Machine learning models that adapt to individual neural patterns.</p>
+                <div class="project-links">
+                  <a href="#" class="project-link">View Details →</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="https://neptune.ai/wp-content/uploads/2022/07/blog_feature_image_014110_5_2_2_6.jpg" alt="Neural Processing Project" class="project-image">
+              <div class="project-overlay">
+                <h3 class="project-title">Neural Signal Processing</h3>
+                <p class="project-description">Advanced algorithms for real-time neural signal processing and interpretation.</p>
+                <div class="project-links">
+                  <a href="#" class="project-link">View Details →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="science" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>The Science</h2>
+          <div class="science-grid">
+            <div class="science-item">
+              <div class="science-number">01</div>
+              <h3>Neural Interface</h3>
+              <p>High-density electrode arrays capture detailed neural activity patterns.</p>
+            </div>
+            <div class="science-item">
+              <div class="science-number">02</div>
+              <h3>Signal Processing</h3>
+              <p>Advanced algorithms decode neural signals into precise digital commands.</p>
+            </div>
+            <div class="science-item">
+              <div class="science-number">03</div>
+              <h3>Integration</h3>
+              <p>Seamless connection between neural signals and external devices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Our Vision</h2>
+          <p>We envision a future where neural technology enhances human potential, enabling new forms of communication, creativity, and capability. Our mission is to develop safe, accessible brain-computer interfaces that improve quality of life for people worldwide.</p>
+          <div class="vision-stats">
+            <div class="stat">
+              <span class="stat-number">100x</span>
+              <span class="stat-label">Faster Neural Processing</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">0.1ms</span>
+              <span class="stat-label">Response Time</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Accuracy Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Join Our Team</h2>
+          <p>We're looking for exceptional individuals to help build the future of neural technology. Join us in developing groundbreaking solutions that push the boundaries of human potential.</p>
+          <div class="careers-grid">
+            <a href="#" class="career-card">
+              <div class="card-content">
+                <h3>Neural Engineers</h3>
+                <p>Design and develop advanced neural interfaces</p>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+            <a href="#" class="career-card">
+              <div class="card-content">
+                <h3>Software Engineers</h3>
+                <p>Build the next generation of neural processing systems</p>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+            <a href="#" class="career-card">
+              <div class="card-content">
+                <h3>Research Scientists</h3>
+                <p>Advance the science of brain-computer interfaces</p>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-content">
+          <h2>Contact Us</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="#" class="logo">
+            <div class="logo-symbol">
+                <div class="logo-circuit"></div>
+                <div class="logo-paths">
+                    <div class="logo-path"></div>
+                    <div class="logo-path"></div>
+                </div>
+            </div>
+            <span class="logo-text">CyberLink</span>
+          </a>
+          <p>Advancing human potential through neural technology</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#privacy">Privacy</a></li>
+              <li><a href="#terms">Terms</a></li>
+              <li><a href="#patents">Patents</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CyberLink. All rights reserved. <br>Dev by Tanvir Hasan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="animations.js"></script>
+  <script src="canvas.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

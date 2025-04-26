@@ -1,0 +1,370 @@
+/* Animations */
+@keyframes wheel {
+    0% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(15px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+      box-shadow: 0 0 0 0 rgba(0, 246, 255, 0.4);
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+      box-shadow: 0 0 20px 10px rgba(0, 246, 255, 0.2);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+      box-shadow: 0 0 0 0 rgba(0, 246, 255, 0.4);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: inset(40% 0 61% 0);
+      transform: translate(-5px, 5px);
+      text-shadow: -2px 0 #00f6ff, 2px 2px #ff00c1;
+    }
+    20% {
+      clip-path: inset(92% 0 1% 0);
+      transform: translate(5px, 10px);
+      text-shadow: 1px -1px #00f6ff, -1px 1px #ff00c1;
+    }
+    40% {
+      clip-path: inset(43% 0 1% 0);
+      transform: translate(10px, 5px);
+      text-shadow: 2px 1px #00f6ff, -2px -2px #ff00c1;
+    }
+    60% {
+      clip-path: inset(25% 0 58% 0);
+      transform: translate(5px, 5px);
+      text-shadow: -1px 2px #00f6ff, 1px -1px #ff00c1;
+    }
+    80% {
+      clip-path: inset(54% 0 7% 0);
+      transform: translate(-5px, -5px);
+      text-shadow: 1px 1px #00f6ff, -1px -1px #ff00c1;
+    }
+    100% {
+      clip-path: inset(58% 0 43% 0);
+      transform: translate(-5px, 10px);
+      text-shadow: -2px 0 #00f6ff, 2px 2px #ff00c1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+      filter: blur(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+  
+  @keyframes scanLine {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes neonPulse {
+    0% {
+      box-shadow: 0 0 5px var(--color-primary),
+                  0 0 10px var(--color-primary),
+                  0 0 15px var(--color-primary);
+    }
+    50% {
+      box-shadow: 0 0 10px var(--color-primary),
+                  0 0 20px var(--color-primary),
+                  0 0 30px var(--color-primary);
+    }
+    100% {
+      box-shadow: 0 0 5px var(--color-primary),
+                  0 0 10px var(--color-primary),
+                  0 0 15px var(--color-primary);
+    }
+  }
+  
+  @keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Animated Elements */
+  .icon-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  .product-tag {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .feature-card:hover .feature-icon svg {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .scroll-indicator {
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+  }
+  
+  .highlight {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0.3;
+    animation: glitch 5s infinite;
+    z-index: -2;
+    display: none;
+  }
+  
+  .highlight:hover::before {
+    display: block;
+  }
+  
+  .loader-bar {
+    animation: progress 2s ease-out forwards;
+  }
+  
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .btn:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(50%, 50%);
+  }
+  
+  .btn-primary {
+    animation: neonPulse 2s infinite;
+  }
+  
+  h1, h2 {
+    background: linear-gradient(
+        90deg,
+        var(--color-text) 0%,
+        var(--color-primary) 50%,
+        var(--color-text) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 3s linear infinite;
+  }
+  
+  /* Scroll Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-5deg);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(50px) rotate(5deg);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+  
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: opacity, transform;
+  }
+  
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Scan Line Effect */
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    animation: scanLine 3s linear infinite;
+    z-index: 10;
+    opacity: 0.5;
+  }
+  
+  /* Feature Card Hover Effect */
+  .feature {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 246, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 246, 255, 0.1);
+  }
+  
+  .feature:hover::before {
+    transform: translateX(100%);
+  }
+  
+  /* Nav Link Hover Effect */
+  .nav-list a {
+    position: relative;
+  }
+  
+  .nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Stats Counter Animation */
+  .stat-number {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-number:hover {
+    transform: scale(1.1);
+    color: var(--color-primary);
+  }
+  
+  /* Career Card Animation */
+  .career-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .career-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 246, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  
+  .career-card:hover::before {
+    transform: translateX(100%);
+  }
